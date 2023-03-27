@@ -1,0 +1,25 @@
+<head>
+    {{ if .IsHome }}
+    <title>{{ .Site.Title }}</title>
+    {{ else }}
+    <title>{{ .Page.Params.Name }}</title>
+    {{ end }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="{{ .Params.Description }}" />
+    <meta name="dc.relation" content="{{ .Site.BaseURL }}" />
+    <meta name="theme-color" content="#0ebcc1">
+    <meta name="robots" content="index,follow">
+    {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
+
+    {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+    {{ $main := resources.Get "js/index.js" | js.Build $options | resources.Minify | fingerprint -}}
+    <script src="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}" defer></script>
+
+    <link rel='shortcut icon' type='image/x-icon' href='https://cms.admin.containerize.com/templates/aspose/favicon.ico' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
+</head>

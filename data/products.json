@@ -1,0 +1,32 @@
+[
+  {
+    "products": [
+      { "name": "Aspose.Total Product Family", "price": "3999" },
+      { "name": "Aspose.Words Product Family", "price": "1199" },
+      { "name": "Aspose.Cells Product Family", "price": "1199" },
+      { "name": "Aspose.PDF Product Family", "price": "1199" },
+      { "name": "Aspose.Slides Product Family", "price": "999" },
+      { "name": "Aspose.Email Product Family", "price": "999" },
+      { "name": "Aspose.BarCode Product Family", "price": "999" },
+      { "name": "Aspose.Imaging Product Family", "price": "999" },
+      { "name": "Aspose.HTML Product Family", "price": "999" },
+      { "name": "Aspose.Tasks Product Family", "price": "799" },
+      { "name": "Aspose.Diagram Product Family", "price": "799" },
+      { "name": "Aspose.OCR Product Family", "price": "799" },
+      { "name": "Aspose.Note Product Family", "price": "799" },
+      { "name": "Aspose.CAD Product Family", "price": "799" },
+      { "name": "Aspose.ZIP Product Family", "price": "799" },
+      { "name": "Aspose.3D Product Family", "price": "799" },
+      { "name": "Aspose.GIS Product Family", "price": "799" },
+      { "name": "Aspose.PSD Product Family", "price": "599" },
+      { "name": "Aspose.Page Product Family", "price": "599" },
+      { "name": "Aspose.SVG Product Family", "price": "599" },
+      { "name": "Aspose.PUB Product Family", "price": "599" },
+      { "name": "Aspose.OMR Product Family", "price": "599" },
+      { "name": "Aspose.Finance Product Family", "price": "399" },
+      { "name": "Aspose.Drawing Product Family", "price": "399" },
+      { "name": "Aspose.Font Product Family", "price": "399" },
+      { "name": "Aspose.TeX Product Family", "price": "399" }
+    ]
+  }
+]

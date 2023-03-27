@@ -1,0 +1,74 @@
+<!-- Shopping cart icon -->
+<div class="container">
+<div class="cart-icon " onclick="toggleCartDropdown()">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+  <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+</svg>
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-counter">
+    0
+    <span class="visually-hidden">items in cart</span>
+  </span>
+</div>
+</div>
+<!-- Shopping cart dropdown -->
+<div id="cart-dropdown" class="cart-dropdown card">
+  <div class="card-body">
+    <h5 class="card-title">Shopping Cart</h5>
+    <ul id="cart-items" class="list-group list-group-flush"></ul>
+  </div>
+  <div class="card-footer">
+    <button type="button" class="btn btn-primary">Checkout</button>
+  </div>
+</div>
+
+<script>
+     let cart = [];
+  const cartDropdown = document.getElementById('cart-dropdown');
+  const cartItems = document.getElementById('cart-items');
+  const cartCounter = document.getElementById('cart-counter');
+
+  function toggleCartDropdown() {
+    cartDropdown.style.display = cartDropdown.style.display === 'none' ? 'block' : 'none';
+  }
+
+  function addToCart(product) {
+    // Check if the product is already in the cart
+    const existingProduct = cart.find(item => item.id === product.id);
+
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else
+    // Add the product to the cart
+      cart.push({ ...product, quantity: 1 });
+    }
+
+    updateCartUI();
+  
+
+  function removeFromCart(productId) {
+    const index = cart.findIndex(item => item.id === productId);
+    if (index > -1) {
+      cart.splice(index, 1);
+    }
+
+    updateCartUI();
+  }
+
+  function updateCartUI() {
+    // Update cart counter
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    cartCounter.textContent = totalItems;
+
+    // Update cart items
+    cartItems.innerHTML = '';
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.className = 'list-group-item d-flex justify-content-between align-items-center';
+      li.innerHTML = `
+        ${item.name} x${item.quantity}
+        <button type="button" class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})">Remove</button>
+      `;
+      cartItems.appendChild(li);
+    });
+  }
+</script>

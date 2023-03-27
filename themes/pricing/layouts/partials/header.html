@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9">
+    <h2 class="display-6">{{ .Params.Name }}</h2>
+    <p class="lead">
+      {{ .Params.Description }}
+    </p>
+    </div>
+    <div class="col-sm-3" style="display: flex; align-items: center;">
+      {{ if not .IsHome }}
+      <img src="{{ printf "https://%s" .Params.LargeImg }}" alt="{{ .Params.Name }} logo" width="43%">
+      {{ end }}
+    </div>
+    </div>
+  </div>
+</div>
+

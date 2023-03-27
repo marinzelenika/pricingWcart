@@ -1,0 +1,85 @@
+[
+  {
+    "desc-Aspose.Total Product Family": {
+      "other": "Manipulate Word, Excel, PDF, PowerPoint, Outlook and more than 100 other file formats using our native APIs for .NET, Java, Android, C++ and other Platforms."
+    },
+    "desc-Aspose.Words Product Family": {
+      "other": "Native APIs to create, edit, convert & print Word documents from any Desktop, Web or Mobile application."
+    },
+    "desc-Aspose.Cells Product Family": {
+      "other": "Native APIs to create, edit, convert & render Excel files. Export spreadsheets to multiple formats on any platform."
+    },
+    "desc-Aspose.PDF Product Family": {
+      "other": "Native APIs to generate, manipulate, compress, secure or convert PDF files to multiple formats without Adobe Acrobat."
+    },
+    "desc-Aspose.Slides Product Family": {
+      "other": "Native APIs for .NET, Java, C++ & Android to generate, manage and convert PowerPoint Presentations & Slides."
+    },
+    "desc-Aspose.Email Product Family": {
+      "other": "Native APIs to create, manipulate & convert Outlook email & storage files. Implement network protocols such as SMTP, POP3 & IMAP."
+    },
+    "desc-Aspose.BarCode Product Family": {
+      "other": "Develop high-performance apps with the ability to create & scan 1D, 2D and Postal barcode labels."
+    },
+    "desc-Aspose.Imaging Product Family": {
+      "other": "Native APIs to draw, manipulate, transform & convert images."
+    },
+    "desc-Aspose.HTML Product Family": {
+      "other": "Native APIs to Generate, Read and Edit HTML pages including CSS styles as well as Convert to PDF and multiple image formats."
+    },
+    "desc-Aspose.Tasks Product Family": {
+      "other": "Native APIs for .NET, Java & C++ to create, edit and convert Microsoft Project files."
+    },
+    "desc-Aspose.Diagram Product Family": {
+      "other": ".NET & Java APIs to create, edit and convert Microsoft Visio files on any platform."
+    },
+    "desc-Aspose.OCR Product Family": {
+      "other": "Native .NET, Java and C++ APIs to add OCR capability to your own applications."
+    },
+    "desc-Aspose.Note Product Family": {
+      "other": "Native .NET & Java APIs to create, edit and convert Microsoft OneNote documents."
+    },
+    "desc-Aspose.CAD Product Family": {
+      "other": "Native .NET & Java APIs to convert AutoCAD DWG & DXF drawings to PDF & raster images"
+    },
+    "desc-Aspose.ZIP Product Family": {
+      "other": "Compress or decompress files or modify existing archives via .NET API."
+    },
+    "desc-Aspose.3D Product Family": {
+      "other": "Native APIs to read, edit and convert 3D document formats without any 3D modeling or rendering software."
+    },
+    "desc-Aspose.GIS Product Family": {
+      "other": "Native APIs to build GIS based mapping and location applications for any platform."
+    },
+    "desc-Aspose.PSD Product Family": {
+      "other": ".NET & Java APIs to create, edit and convert Adobe Photoshop and Adobe Illustrator files."
+    },
+    "desc-Aspose.Page Product Family": {
+      "other": "Native APIs to create & manipulate XPS files. Convert XPS, PS & EPS files to PDF and raster images on any platform."
+    },
+    "desc-Aspose.SVG Product Family": {
+      "other": "Native .NET APIs to load, save and convert SVG files without any software dependencies."
+    },
+    "desc-Aspose.PUB Product Family": {
+      "other": "Native .NET APIs to convert PUB files to PDF without any software dependencies."
+    },
+    "desc-Aspose.OMR Product Family": {
+      "other": "Native APIs to recognize scanned documents and photos in a variety of image formats including BMP, JPG, TIF, TIFF, and GIF."
+    },
+    "desc-Aspose.Finance Product Family": {
+      "other": "Native .NET APIs to manipulate finance-related formats like XBRL, iXBRL without any software dependencies."
+    },
+    "desc-Aspose.Drawing Product Family": {
+      "other": "Native APIs to parse 2D Drawing including rendering vector graphics and text without any software dependencies."
+    },
+    "desc-Aspose.Font Product Family": {
+      "other": "Native APIs to load, draw and save multiple fonts without any software dependencies."
+    },
+    "desc-Aspose.TeX Product Family": {
+      "other": ""
+    },
+    "only-supported": {
+      "other": "This product is currently only supported for the .NET platform and therefore no family pack is available."
+    }
+  }
+]

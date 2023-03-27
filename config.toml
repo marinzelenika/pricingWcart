@@ -1,0 +1,33 @@
+baseURL = 'https://purchase.aspose.com/'
+languageCode = 'en-us'
+title = 'aspose.com pricing information'
+theme = 'pricing'
+draft = "false"
+enableInlineShortcodes = true
+
+[module]
+  [[module.mounts]]
+    source = 'prebuild/public/product'
+    target = 'content'
+  [[module.mounts]]
+    source = 'themes/pricing/content'
+    target = 'content'
+  [[module.mounts]]
+    source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    target = "assets/js/bootstrap.bundle.min.js"
+  
+
+[params]
+    url = "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose?isArchived=&pageNumber=&pageSize=&applyDisplayOrder=true&includeProducts=false"
+
+
+defaultContentLanguage = 'en'
+[languages]
+  [languages.de]
+    contentDir = 'content/de'
+    languageName = 'Deutsch'
+    weight = 3
+  [languages.en]
+    contentDir = 'content/en'
+    languageName = 'English'
+    weight = 1

@@ -1,0 +1,121 @@
+{{ define "main" }}
+<div class="container">
+{{ with resources.GetRemote
+"https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose?isArchived=&pageNumber=&pageSize=&applyDisplayOrder=true&includeProducts=false"
+}} {{ with .Err }} {{ warnf "%s" . }} {{ else }} {{ with .Content }} {{ with
+transform.Unmarshal . }}
+<div class="row">
+  {{ range . }}
+  <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
+    <div class="card mt-3 mb-3">
+      <div class="card-body">
+        {{ $imgUrl := substr .SmallLogoImageSrc 2 }}
+        <img
+          class="product-icon"
+          src="{{ printf "https://%s" $imgUrl }}"
+          width="50"
+          height="50"
+          alt="{{ .Name }}"
+        />
+        {{ $split := split .Name " " }}
+        {{ $splitName := index $split 0 }}
+        <h5 class="card-title"><strong>{{ $splitName }}</strong></h5>
+        <p class="card-text">
+            {{ $descc := print "desc-" "" .Name }}
+            {{ i18n $descc . }}
+        </p>
+       
+        <p class="card-text">
+          From <br />
+            {{ $name := .Name }}
+            {{ $dataJ := getJSON "data/products.json" }}
+            {{ range $dataJ }}
+            {{ range .products }}
+            {{ if eq .name $name }}
+            <strong style="font-size: x-large; color: black">{{ .price }} USD</strong>
+            {{end}}
+            {{end}}
+            {{end}}
+          <br />per platform, per year
+        </p>
+
+        <div class="dropdown">
+          <a
+            class="btn btn-secondary dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Choose a platform
+          </a>
+          
+
+          <ul class="dropdown-menu">
+            {{ $id := .Id }}
+            {{ range $.Site.Pages }}
+            {{ if eq .Params.FamilyId $id }}
+            {{ if not (strings.Contains .Params.Name "Product Family") }}
+            <li><a class="dropdown-item" href="{{ .RelPermalink }}">{{ .Params.Name }}</a></li>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+          </ul>
+          
+        </div>
+
+        <div class="hr-or">
+          <span>or</span>
+        </div>
+
+        
+        {{ $url := print
+          "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose/name-"
+          "" .Name }} {{ with resources.GetRemote $url }} {{ with .Err }} {{
+          warnf "%s" . }} {{ else }} {{ with .Content }} {{ with
+          transform.Unmarshal . }}
+        {{ range $i, $j := .Products }}
+        {{ $prodName := .Name }}
+        {{ range first 1 .PricingPlans }}
+        {{ range .PaymentScheduleList }}
+        {{ if strings.Contains $prodName "Family" }}
+        <span style="font-size: xx-small; word-spacing: 0.01px; color: gray;"
+          >Get all platforms in a family pack starting from
+        </span>
+        <br />
+        <strong style="font-size: x-large">{{ .SubscriptionPeriodCharge }} USD </strong>
+        <div class="d-flex justify-content-center">
+                    {{ range $.Site.Pages }}
+            {{ if eq .Params.FamilyId $id }}
+            {{ if strings.Contains .Params.Name "Product Family" }}
+          <a href="{{ .RelPermalink }}" class="btn btn-primary btn-lg fam-pack-btn"
+            ><span style="margin: auto">Select family pack</span></a
+          >
+          {{ end }}{{ end }}{{ end }}
+        </div>
+        {{ else if eq $i 0 }}
+        <span style="font-size: x-small; font-style:italic;">{{ i18n "only-supported" }}</span>
+        <div class="d-flex justify-content-center">
+                    {{ range $.Site.Pages }}
+            {{ if eq .Params.FamilyId $id }}
+          <a href="{{ .RelPermalink }}" class="btn btn-primary btn-lg fam-pack-btn"
+            ><span style="margin: auto">{{ .Params.Name }}</span></a
+          >
+          {{ end }}{{ end }}
+        </div>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+        {{ end }}
+        {{ end }} {{ end }}{{ end }}{{ end }}
+        
+      </div>
+    </div>
+  </div>
+
+  {{ end }}
+</div>
+{{ end }}{{ end }}{{ end }}{{ end }}
+
+</div>
+{{ end }}

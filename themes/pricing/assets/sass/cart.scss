@@ -1,0 +1,25 @@
+.cart-icon {
+  position: fixed;
+  top: 100px;
+  right: 1em;
+  cursor: pointer;
+  background-color: #f8f9fa; /* Background color */
+  border: 1px solid #0ebcc1; /* Border color */
+  border-radius: 50%; /* Make it a circle */
+  width: 50px; /* Width of the circle */
+  height: 50px; /* Height of the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1001;
+}
+
+.cart-dropdown {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  display: none;
+  width: 300px;
+  z-index: 1000;
+}
