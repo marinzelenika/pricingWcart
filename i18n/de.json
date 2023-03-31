@@ -1,0 +1,85 @@
+[
+  {
+    "desc-Aspose.Total Product Family": {
+      "other": "Bearbeiten Sie Word, Excel, PDF, PowerPoint, Outlook und mehr als 100 andere Dateiformate mit unseren nativen APIs für .NET, Java, Android, C++ und andere Plattformen."
+    },
+    "desc-Aspose.Words Product Family": {
+      "other": "Native APIs zum Erstellen, Bearbeiten, Konvertieren und Drucken von Word-Dokumenten aus jeder Desktop-, Web- oder Mobilanwendung."
+    },
+    "desc-Aspose.Cells Product Family": {
+      "other": "Native APIs zum Erstellen, Bearbeiten, Konvertieren und Rendern von Excel-Dateien. Exportieren Sie Tabellenkalkulationen in mehrere Formate auf jeder Plattform."
+    },
+    "desc-Aspose.PDF Product Family": {
+      "other": "Native APIs zum Generieren, Bearbeiten, Komprimieren, Sichern oder Konvertieren von PDF-Dateien in mehrere Formate ohne Adobe Acrobat."
+    },
+    "desc-Aspose.Slides Product Family": {
+      "other": "Native APIs für .NET, Java, C++ und Android zum Generieren, Verwalten und Konvertieren von PowerPoint-Präsentationen und Folien."
+    },
+    "desc-Aspose.Email Product Family": {
+      "other": "Native APIs zum Erstellen, Bearbeiten und Konvertieren von Outlook-E-Mails und Speicherdateien. Implementieren Sie Netzwerkprotokolle wie SMTP, POP3 und IMAP."
+    },
+    "desc-Aspose.BarCode Product Family": {
+      "other": "Entwickeln Sie leistungsstarke Apps mit der Möglichkeit, 1D-, 2D- und Post-Barcodelabels zu erstellen und zu scannen."
+    },
+    "desc-Aspose.Imaging Product Family": {
+      "other": "Native APIs zum Zeichnen, Bearbeiten, Transformieren und Konvertieren von Bildern."
+    },
+    "desc-Aspose.HTML Product Family": {
+      "other": "Native APIs zum Generieren, Lesen und Bearbeiten von HTML-Seiten, einschließlich CSS-Stile, sowie Konvertieren in PDF und verschiedene Bildformate."
+    },
+    "desc-Aspose.Tasks Product Family": {
+      "other": "Native APIs für .NET, Java und C++ zum Erstellen, Bearbeiten und Konvertieren von Microsoft Project-Dateien."
+    },
+    "desc-Aspose.Diagram Product Family": {
+      "other": ".NET- und Java-APIs zum Erstellen, Bearbeiten und Konvertieren von Microsoft Visio-Dateien auf jeder Plattform."
+    },
+    "desc-Aspose.OCR Product Family": {
+      "other": "Native .NET-, Java- und C++-APIs, um OCR-Funktionalität in Ihren eigenen Anwendungen hinzuzufügen."
+    },
+    "desc-Aspose.Note Product Family": {
+      "other": "Native .NET- und Java-APIs zum Erstellen, Bearbeiten und Konvertieren von Microsoft OneNote-Dokumenten."
+    },
+    "desc-Aspose.CAD Product Family": {
+      "other": "Native .NET- und Java-APIs zum Konvertieren von AutoCAD DWG- und DXF-Zeichnungen in PDF- und Rasterbilder"
+    },
+    "desc-Aspose.ZIP Product Family": {
+      "other": "Komprimieren oder Dekomprimieren von Dateien oder Ändern vorhandener Archive über .NET-API."
+    },
+    "desc-Aspose.3D Product Family": {
+      "other": "Native APIs zum Lesen, Bearbeiten und Konvertieren von 3D-Dokumentformaten ohne jegliche 3D-Modellierungs- oder Rendering-Software."
+    },
+    "desc-Aspose.GIS Product Family": {
+      "other": "Native APIs zum Erstellen von GIS-basierten Mapping- und Standortanwendungen für jede Plattform."
+    },
+    "desc-Aspose.PSD Product Family": {
+      "other": ".NET- und Java-APIs zum Erstellen, Bearbeiten und Konvertieren von Adobe Photoshop- und Adobe Illustrator-Dateien."
+    },
+    "desc-Aspose.Page Product Family": {
+      "other": "Native APIs zum Erstellen und Bearbeiten von XPS-Dateien. Konvertieren Sie XPS-, PS- und EPS-Dateien in PDF und Rasterbilder auf jeder Plattform."
+    },
+    "desc-Aspose.SVG Product Family": {
+      "other": "Native .NET-APIs zum Laden, Speichern und Konvertieren von SVG-Dateien ohne Softwareabhängigkeiten."
+    },
+    "desc-Aspose.PUB Product Family": {
+      "other": "Native .NET-APIs zum Konvertieren von PUB-Dateien in PDF ohne Softwareabhängigkeiten."
+    },
+    "desc-Aspose.OMR Product Family": {
+      "other": "Native APIs zum Erkennen gescannter Dokumente und Fotos in verschiedenen Bildformaten wie BMP, JPG, TIF, TIFF und GIF."
+    },
+    "desc-Aspose.Finance Product Family": {
+      "other": "Native .NET-APIs zum Bearbeiten von finanzbezogenen Formaten wie XBRL, iXBRL ohne Softwareabhängigkeiten."
+    },
+    "desc-Aspose.Drawing Product Family": {
+      "other": "Native APIs zum Analysieren von 2D-Zeichnungen, einschließlich Rendering von Vektorgrafiken und Text ohne Softwareabhängigkeiten."
+    },
+    "desc-Aspose.Font Product Family": {
+      "other": "Native APIs zum Laden, Zeichnen und Speichern mehrerer Schriftarten ohne Softwareabhängigkeiten."
+    },
+    "desc-Aspose.TeX Product Family": {
+      "other": ""
+    },
+    "only-supported": {
+      "other": "Dieses Produkt wird derzeit nur für die .NET-Plattform unterstützt, und daher ist kein Familienpaket verfügbar."
+    }
+  }
+]

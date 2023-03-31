@@ -20,14 +20,19 @@ enableInlineShortcodes = true
 [params]
     url = "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose?isArchived=&pageNumber=&pageSize=&applyDisplayOrder=true&includeProducts=false"
 
+[params.dynamicmenuid]
+  en = "aspose-en"
+  zh = "aspose-za"
 
 defaultContentLanguage = 'en'
 [languages]
   [languages.de]
     contentDir = 'content/de'
     languageName = 'Deutsch'
+    flag = "flag-de"
     weight = 3
   [languages.en]
-    contentDir = 'content/en'
+    contentDir = 'content'
     languageName = 'English'
+    flag = "flag-us"
     weight = 1

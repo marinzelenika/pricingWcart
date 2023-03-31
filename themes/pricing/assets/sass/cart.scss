@@ -16,10 +16,13 @@
 }
 
 .cart-dropdown {
-  position: fixed;
+  position: absolute;
   top: 60px;
   right: 10px;
   display: none;
   width: 300px;
   z-index: 1000;
+}
+.cart-dropdown.show {
+    display: block;
 }

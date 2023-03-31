@@ -7,7 +7,7 @@
     "https://purchase-api.dynabic.com/v1.2/productFamily/site-aspose/name-" ""
     .Name }} {{ with resources.GetRemote $url }} {{ with .Err }} {{ warnf "%s" .
     }} {{ else }} {{ with .Content }} {{ with transform.Unmarshal . }} {{ range
-    .Products }} {{ $id := .Id }} {{ if eq $id $.Page.Params.Id }} {{ range
+    .Products }} {{ $id := .Id }} {{ $smallLogo := .SmallLogoImageSrc }} {{ if eq $id $.Page.Params.Id }} {{ range
     .PricingPlans }} {{ if not (or (strings.Contains .Name "Old Subscription") (lt .DisplayOrder 0)) }} {{
     $name := .Name }} {{ $ppId := .Id }} {{ $lastchar := substr $name -1 }} {{
     if eq $lastchar "1" }} {{ $onlyName := split $name "*" }}
@@ -17,15 +17,17 @@
         <div class="card-body">
           <h5 class="card-title" style="margin: 0;"><strong>{{ index $onlyName 0 }}</strong></h5>
           <p style="font-size: x-small; color: grey;">{{ .LicenseNote }}</p>
+          {{ $price := 0 }}
           {{ range .PaymentScheduleList }}
+          {{ $price = .SubscriptionPeriodCharge }}
           <h3 style="margin: 0">${{ .SubscriptionPeriodCharge }}</h3>
           {{ end }}
           <p style="font-size: small">with Free Support</p>
           {{ $linkUrl := print "https://purchase.aspose.com/buy/cart?ppId=" ""
           $ppId }}
           <input type="hidden" id="product-{{ .Id }}" value="{{ .Name }}">
-          <a class="btn btn-primary btn-lg fam-pack-btn1" href="#" onclick="event.preventDefault(); addToCart({ id: {{ .Id }}, name: '{{ .Name }}'});"
-            ><span style="margin: auto">Select</span></a
+          <a class="btn btn-primary btn-lg fam-pack-btn1 add-to-cart" href="#" data-product='{"id": "{{ .Id }}", "name": "{{ .Name }}", "price": {{ $price | default 0 }}, "smallLogo": "{{ $smallLogo }}"}'
+            ><span style="margin: auto">Add to cart</span></a
           >
           <hr />
           {{ range .PaymentScheduleList }} {{ $SubCharges :=
