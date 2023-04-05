@@ -33,6 +33,12 @@ function saveCart(cart) {
   renderCartItems();
 }
 
+function removeFromCart(productId) {
+  let cart = getCart();
+  cart = cart.filter((item) => item.id !== productId);
+  saveCart(cart);
+}
+
 function renderCartItems() {
   const cart = getCart();
   const cartItemsContainer = document.getElementById("cart-items");
@@ -55,6 +61,9 @@ function renderCartItems() {
                 <span class="badge bg-primary rounded-pill">${
                   item.price * item.quantity
                 }</span>
+                <button class="btn btn-sm btn-danger ms-2" onclick="removeFromCart('${
+                  item.id
+                }')">X</button>
             `;
       cartItemsContainer.appendChild(cartItem);
     });
@@ -62,6 +71,7 @@ function renderCartItems() {
 
   updateCartCounter(cart);
 }
+
 
 function updateCartCounter(cart) {
   const cartCounter = document.getElementById("cart-counter");
@@ -79,4 +89,4 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCartItems();
 });
 window.toggleCartDropdown = toggleCartDropdown;
-
+window.removeFromCart = removeFromCart;

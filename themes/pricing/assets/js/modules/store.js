@@ -1,4 +1,4 @@
- let cart = [];
+/*  let cart = [];
   const cartDropdown = document.getElementById('cart-dropdown');
   const cartItems = document.getElementById('cart-items');
   const cartCounter = document.getElementById('cart-counter');
@@ -46,4 +46,4 @@
       `;
       cartItems.appendChild(li);
     });
-  }
+  } */
