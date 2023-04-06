@@ -16,11 +16,12 @@
     {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
     <link rel="stylesheet" href="https://www.aspose.com/css/locale.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     {{ $main := resources.Get "js/index.js" | js.Build $options | resources.Minify | fingerprint -}}
-    <script src="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}" defer></script>
+    <script src="{{ $main.RelPermalink }}" defer></script>
 
     {{ $cart := resources.Get "js/modules/shoppingCart.js" | js.Build $options | resources.Minify | fingerprint -}}
-    <script src="{{ $cart.RelPermalink }}" integrity="{{ $cart.Data.Integrity }}" defer></script>
+    <script src="{{ $cart.RelPermalink }}" defer></script>
     <link rel='shortcut icon' type='image/x-icon' href='https://cms.admin.containerize.com/templates/aspose/favicon.ico' />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

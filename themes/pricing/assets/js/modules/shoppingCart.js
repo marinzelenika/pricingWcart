@@ -55,9 +55,7 @@ function renderCartItems() {
       cartItem.className =
         "list-group-item d-flex justify-content-between align-items-center";
       cartItem.innerHTML = `
-                ${item.name} - ${item.price} (${
-        item.quantity
-      })
+                ${item.name} - ${item.price} (${item.quantity})
                 <span class="badge bg-primary rounded-pill">${
                   item.price * item.quantity
                 }</span>

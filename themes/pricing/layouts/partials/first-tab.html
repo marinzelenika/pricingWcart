@@ -26,11 +26,10 @@
           {{ $linkUrl := print "https://purchase.aspose.com/buy/cart?ppId=" ""
           $ppId }}
           <input type="hidden" id="product-{{ .Id }}" value="{{ .Name }}">
-          <a class="btn btn-primary btn-lg fam-pack-btn1 add-to-cart" href="#" data-product='{"id": "{{ .Id }}", "name": "{{ index $onlyName 0 }}", "price": {{ $price | default 0 }}, "smallLogo": "{{ $smallLogo }}"}' data-bs-dismiss="toast" data-bs-target="#my-toast"
-            ><span style="margin: auto">Add to cart</span></a
+          <button class="btn btn-primary btn-lg fam-pack-btn1 add-to-cart" data-product="{{ dict "id" .Id "name" (index $onlyName 0) "price" ($price | default 0) "smallLogo" $smallLogo | jsonify }}" 
+            ><span style="margin: auto">Add to cart</span></button
           >
           <hr />
-          {{ partial "toast" . }}
           {{ range .PaymentScheduleList }} {{ $SubCharges :=
           .SubscriptionPeriodCharge }}  
 
